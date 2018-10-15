@@ -1,0 +1,62 @@
+.jumbotron {
+  overflow: hidden;
+
+  max-width: 100%;
+  height: 768px;
+
+  &__carousel {
+    display: flex;
+
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    // TODO: REMOVE
+    @each $breakpoint in map-keys($grid-breakpoints) {
+      @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+        transform: translateX(calc((100vw - #{map-get($grid-breakpoints, $breakpoint)}) / 2 - #{map-get($grid-breakpoints, $breakpoint)}));
+      }
+    }
+  }
+
+  &__heading {
+    margin: 0;
+  }
+
+  &__heading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    margin: 0;
+  }
+
+  &__link {
+    align-self: flex-end;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__slide {
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    padding: 128px 24px 24px;
+
+    background-position: center;
+    background-size: cover;
+
+    @each $breakpoint in map-keys($grid-breakpoints) {
+      @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+        min-width: map-get($grid-breakpoints, $breakpoint);
+      }
+    }
+  }
+}

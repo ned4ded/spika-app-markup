@@ -1,0 +1,54 @@
+{% set links = [
+  'Events',
+  'Archive',
+  'Blog',
+  'Contact',
+  'En',
+  'Search',
+  'Wishlist',
+  'Log in'
+] %}
+
+{% macro make(classes) %}
+  <div class="navbar clearfix{{ ' ' + classes if classes }}">
+    <div class="navbar__content">
+      <div class="navbar__inputs">
+        <div class="container">
+          <div class="row">
+            <div class="col-4">
+
+              <form class="login login--navbar navbar__login" action="/" method="post">
+                <input type="email" placeholder="E-mail" class="login__item login__input login__email">
+                <input type="password" placeholder="Password" class="login__item login__input login__password">
+                <button type="submit" class="login__item login__submit btn-link">Register</button>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-4 navbar__core">
+
+            <a href="/" class="navbar__brand">
+              <img src="assets/imgs/logotype@2x.png" alt="Spika logotype" width="170" height="32">
+            </a>
+
+            <ul class="menu navbar__menu">
+              {% for link in links %}
+                <li class="menu__item">
+                  <a href="#" class="menu__link">
+                    {{ link }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endmacro %}

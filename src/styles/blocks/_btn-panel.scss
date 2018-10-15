@@ -1,0 +1,23 @@
+.btn-panel {
+  display: flex;
+  width: 100%;
+  min-height: 350px;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: $h3-font-size;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    text-decoration: none;
+  }
+
+  &--contrast {
+    $contrast : map-get($theme-colors, "contrast");
+
+    @include button-variant($contrast, $contrast);
+  }
+}

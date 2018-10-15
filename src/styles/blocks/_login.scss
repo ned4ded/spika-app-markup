@@ -1,0 +1,52 @@
+.login {
+  &--navbar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+  }
+
+  &__item {
+    display: inline-block;
+
+    margin: 0 12px;
+  }
+
+  &__input {
+    width: 135px;
+    padding: 0;
+
+    color: $body-color;
+    border: none;
+    border-bottom: 1px solid rgba($body-color, .25);
+    background-color: transparent;
+
+    &:focus {
+      border-color: $body-color;
+      outline: 0;
+    }
+
+    &::placeholder {
+      text-transform: uppercase;
+
+      color: rgba($body-color, .4);
+    }
+  }
+
+  &__submit {
+    padding: 0 5px;
+
+    cursor: pointer;
+    text-transform: uppercase;
+
+    color: $body-color;
+    border: none;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}

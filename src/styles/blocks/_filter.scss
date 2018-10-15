@@ -1,0 +1,75 @@
+.filter {
+  display: flex;
+  flex-flow: row wrap;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  &__item {
+    width: 25%;
+
+    &:nth-child(4n - 3) {
+      border-left: solid 1px $body-color;
+    }
+
+    &:nth-child(n + 5) {
+      border-top: none;
+    }
+  }
+
+  &__link {
+    $primary : map-get($theme-colors, "primary");
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 0px 15px;
+
+    line-height: 2.58;
+    border: solid 1px $body-color;
+    border-left: 0;
+
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &--contrast {
+      $contrast : map-get($theme-colors, "contrast");
+
+      @include button-variant($contrast, $contrast);
+    }
+  }
+
+  &__item:nth-child(4n - 3) &__link {
+    border-left: solid 1px $body-color;
+  }
+
+  &__item:nth-child(n + 5) &__link {
+    border-top: none;
+  }
+
+  &__icon {
+    width: 11px;
+    height: 24px;
+
+    background-image: url('../assets/imgs/icon-arrow-down.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
+
+  &__link:hover &__icon {
+    opacity: .92;
+  }
+
+  &__link--contrast &__icon {
+    width: 16px;
+    height: 16px;
+    background-image: url('../assets/imgs/icon-close.png');
+  }
+}

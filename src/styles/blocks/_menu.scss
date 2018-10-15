@@ -1,0 +1,30 @@
+.menu {
+  display: inline-flex;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  &__item {
+    display: inline-block;
+
+    margin: 0px 12px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

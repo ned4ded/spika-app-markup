@@ -1,0 +1,36 @@
+{% import "partials/btn-panel.njk" as btn %}
+
+<div class="footer container">
+  <div class="row">
+    <footer class="col-2 footer__content">
+      <div class="container">
+        <div class="row">
+          <div class="col-1">
+            <p>© Spika Concert Agency 2018</p>
+            <p>8-495-909-88-42</p>
+            <p>spika.office@gmail.com</p>
+          </div>
+          <div class="col-1">
+            <ul>
+              <li>
+                Афиша
+              </li>
+              <li>
+                Архив
+              </li>
+              <li>
+                Блог
+              </li>
+              <li>
+                Контакты
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="col-2">
+      {{ btn.make('О нас', 'btn-panel--contrast') }}
+    </div>
+  </div>
+</div>

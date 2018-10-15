@@ -1,0 +1,13 @@
+.badge {
+  border-radius: 3px;
+  font-size: $font-size-sm;
+}
+
+@each $color, $value in $theme-colors {
+  $color-hover: color-yiq($value);
+
+  .badge-outline-#{$color} {
+    color: $value;
+    border: $border-width solid $value;
+  }
+}

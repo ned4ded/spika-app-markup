@@ -1,0 +1,33 @@
+.navbar {
+  position: relative;
+  z-index: 1;
+
+  &__content {
+    top: -64px;
+
+    width: 100%;
+  }
+
+  &--p--absolute &__content {
+    position: absolute;
+  }
+
+  &__core {
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    min-height: 64px;
+  }
+
+  &__inputs {
+    min-height: 64px;
+
+    background-color: $body-bg;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+}
