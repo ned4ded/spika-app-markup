@@ -3,6 +3,14 @@
   font-size: $font-size-sm;
 }
 
+.badge-pill {
+  border-radius: 6px;
+}
+
+.badge-rect {
+  border-radius: 0;
+}
+
 @each $color, $value in $theme-colors {
   $color-hover: color-yiq($value);
 

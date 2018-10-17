@@ -51,3 +51,13 @@ $font-size-lg: 2.25rem; // 36px
 $h1-font-size: $font-size-base * 3.78;
 
 $link-hover-decoration: none;
+
+// $input-padding-y:         1.25rem;
+// $input-padding-x:         1.5rem;
+
+$input-bg: $secondary;
+$input-disabled-bg: darken($secondary, 5%);
+$input-color: white;
+$input-border-color: $secondary;
+$input-focus-border-color: lighten($secondary, 25%);
+$input-placeholder-color: white;

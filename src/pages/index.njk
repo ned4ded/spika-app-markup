@@ -1,18 +1,17 @@
-{% extends "layout.njk" %}
-
-{% import "partials/main-nav.njk" as nav %}
 {% import "partials/filter.njk" as filter %}
 {% import "partials/concert-card.njk" as concert %}
 {% import "partials/btn-panel.njk" as btn %}
 
-{% block content %}
+{% extends "layout.njk" %}
 
-{{ nav.make('navbar--p--absolute') }}
+{% set page = 'index' %}
+
+{% block content %}
 
 {% include "partials/jumbotron.njk" %}
 
-
 <div class="container">
+  {{ page.name }}
   <div class="row">
     <div class="col-4 mb-6 mt-6">
       {{ filter.make() }}

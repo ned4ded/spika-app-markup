@@ -4,21 +4,11 @@
   border-bottom: 1px solid #fff;
 
   &__content {
-    padding: map-get($spacers, 3) 0 map-get($spacers, 2);
-    border-bottom: 1px solid rgba(white, .25);
+    padding-top: map-get($spacers, 3);
+    padding-bottom: map-get($spacers, 2);
 
-    &:last-child {
-      margin-bottom: 0;
-      padding-bottom: 0;
-      border-bottom: none;
-    }
-
-    &:first-child {
-      padding-top: 0;
-    }
-
-    &--no-borders {
-      border-bottom: 0;
+    &--borders {
+      border-bottom: 1px solid rgba(white, .25);
     }
   }
 
