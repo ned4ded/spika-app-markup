@@ -8,7 +8,7 @@
       <span class="concert-card__name">{{ concert.name }}</span>
       <span class="concert-card__tags">
         {% for tag in concert.tags %}
-          <span class="badge badge-{{ tag.type }} concert-card__tag">{{ tag.content }}</span>
+        <span class="badge badge-sm badge-{{ tag.type }} concert-card__tag">{{ tag.content }}</span>
         {% endfor %}
       </span>
     </span>

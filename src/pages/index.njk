@@ -1,17 +1,22 @@
-{% import "partials/filter.njk" as filter %}
-{% import "partials/concert-card.njk" as concert %}
-{% import "partials/btn-panel.njk" as btn %}
+{% import "blocks/filter.njk" as filter %}
+{% import "blocks/concert-card.njk" as concert %}
+{% import "blocks/btn-panel.njk" as btn %}
 
 {% extends "layout.njk" %}
 
-{% set page = 'index' %}
+{% set page = 'page-home' %}
 
 {% block content %}
 
-{% include "partials/jumbotron.njk" %}
+<div class="container-fluid">
+  <div class="row no-gutters-fluid">
+    <div class="col-4">
+      {% include "partials/jumbotron.njk" %}
+    </div>
+  </div>
+</div>
 
 <div class="container">
-  {{ page.name }}
   <div class="row">
     <div class="col-4 mb-6 mt-6">
       {{ filter.make() }}

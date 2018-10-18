@@ -1,0 +1,36 @@
+.concert-board {
+  top: 64px;
+  position: sticky;
+
+  &__block {
+    padding-top: 12px;
+    padding-bottom: 19px;
+    border-bottom: 1px solid #fff;
+    margin: 0;
+
+    &--badges {
+      font-size: $font-size-base;
+      min-height: 138px;
+    }
+
+    &--about {
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    &--buttons {
+      padding-top: 24px;
+      border-bottom: none;
+    }
+  }
+
+  &__city {
+    flex-grow: 1;
+  }
+
+  &__place {
+    width: 100%;
+    text-align: right;
+    color: rgba($body-color, .4);
+  }
+}

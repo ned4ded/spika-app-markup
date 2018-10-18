@@ -14,9 +14,11 @@
     list-style: none;
 
     // TODO: REMOVE
-    @each $breakpoint in map-keys($grid-breakpoints) {
+    @each $breakpoint, $max-width in $container-max-widths {
+      $width: $max-width + $grid-gutter-width;
+      $scroll-w: 7px;
       @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
-        transform: translateX(calc((100vw - #{map-get($grid-breakpoints, $breakpoint)}) / 2 - #{map-get($grid-breakpoints, $breakpoint)}));
+        transform: translateX(calc((100vw - #{$width}) / 2 - #{$width + $scroll-w}));
       }
     }
   }
@@ -53,9 +55,9 @@
     background-position: center;
     background-size: cover;
 
-    @each $breakpoint in map-keys($grid-breakpoints) {
+    @each $breakpoint, $max-width in $container-max-widths {
       @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
-        min-width: map-get($grid-breakpoints, $breakpoint);
+        min-width: $max-width + $grid-gutter-width;
       }
     }
   }
