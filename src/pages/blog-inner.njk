@@ -1,0 +1,80 @@
+{% import "blocks/blog-card.njk" as blogMaker %}
+
+{% extends "layout.njk" %}
+{% set page = 'blog-inner-page' %}
+{% set blogs = datasets.get('blogs.json') %}
+
+{% block content%}
+
+    <div class="container">
+        <div class="row blog-inner-page__content">
+            <div class="col-4">
+                <section class="blog-article row">
+                    <div class="col-4">
+                        <div class="blog-article__date mt-3">06.07.18</div>
+                        <h2 class="blog-article__title h1">{{blogs[1].title}}</h2>
+                        <div class="blog-article__image" style="background-image: url(assets/imgs/jumbotron-carousel-slide-2.jpg)"></div>
+                        <div class="blog-article__descr">{{ blogs[2].descr | safe }}</div>
+                    </div>
+                    <div class="col-4 col-lg-2 col-md-3 mx-auto">
+                        <div class="blog-article__text">
+                            <p>
+                                Detroit-born Jazzelle Zanaughtti likes to doodle. A few years back, she drew a woman from another dimension – a silhouette onto which she scrawled fantasy hair and make-up – and named her Ugly World Wide, a vision of beauty those around her did not recognize. After a move to Chicago and a transformative and resume-fueling shoot with Nick Knight, the line between Zanaughtti and the woman she fever-dreamed up on paper began to dissolve. Already this year she has appeared on covers by i-D and British Vogue, and on runways for Opening Ceremony and Rhianna’s edenic Savage x Fenty presentation, which closed 2018 New York Fashion Week.
+                            </p>
+                            <h4>
+                                What is the most surprising, positive thing about the fashion industry?
+                            </h4>
+                            <p>
+                                Zanaughtti is based in New York now, but we hung out with her this summer in Berlin, where photographer Jordan Hemingway shot her in pieces from the 032c What We Believe collection, accessorized with our latest release: 032c Classics Underwear. Get to know our newest heroine.
+                            </p>
+                            <h4>
+                                Why slamming should be considered as an art?
+                            </h4>
+                            <p>
+                                We talk a lot about categories where the players “stand-in” rather than “stand-out”, where differentiation, innovation and end user benefit are not prized.
+                            </p>
+                            <p>
+                                Despite considerable innovation in technology – from Zoopla to Purple Bricks, the marketing of the main estate agency chains has remained drearily magnolia – it’s very hard to find anything which changes minds beyond existing perceptions.
+                            </p>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+            <div class="col-4">
+                <section class="blog-article blog-article--border row">
+                    <div class="col-4">
+                        <div class="blog-article__date mt-3 mb-1">19.08.18</div>
+                        <h2 class="blog-article__title h1">oldschool is dead</h2>
+                    </div>
+                    <div class="col-4 col-lg-2 col-md-3 mx-auto">
+                        <div class="blog-article__image blog-article__image--narrow mx-auto" style="background-image: url(assets/imgs/blog_img_3.png)"></div>
+                    </div>
+                    <div class="col-4">
+                        <div class="blog-article__descr">The Vintage Caravan are a rock band from Álftanes, Iceland.
+                            <br>
+                            The band was formed in 2006 by Óskar Logi Ágústsson and Guðjón Reynisson before bassist Alexander Örn Númason joined after the first studio album</div>
+                    </div>
+                    <div class="col-4 col-lg-2 col-md-3 mx-auto">
+                        <div class="blog-article__text">
+                            <p>
+                                Detroit-born Jazzelle Zanaughtti likes to doodle. A few years back, she drew a woman from another dimension – a silhouette onto which she scrawled fantasy hair and make-up – and named her Ugly World Wide, a vision of beauty those around her did not recognize. After a move to Chicago and a transformative and resume-fueling shoot with Nick Knight, the line between Zanaughtti and the woman she fever-dreamed up on paper began to dissolve. Already this year she has appeared on covers by i-D and British Vogue, and on runways for Opening Ceremony and Rhianna’s edenic Savage x Fenty presentation, which closed 2018 New York Fashion Week.
+                            </p>
+                            <h4>
+                                What is the most surprising, positive thing about the fashion industry?
+                            </h4>
+                            <p>
+                                Zanaughtti is based in New York now, but we hung out with her this summer in Berlin, where photographer Jordan Hemingway shot her in pieces from the 032c What We Believe collection, accessorized with our latest release: 032c Classics Underwear. Get to know our newest heroine.
+                            </p>
+                            <div class="blog-article__image" style="background-image: url(assets/imgs/blog_img_5.png)"></div>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+
+    </div>
+
+    {% include "partials/newsletter.njk" %}
+{% endblock %}

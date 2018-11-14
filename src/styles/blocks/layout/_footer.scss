@@ -1,0 +1,100 @@
+.footer {
+
+  &__row {
+    @media (max-width: 767px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__about {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+  }
+
+  &__block-copyright {
+
+  }
+
+  &__block-social {
+    @include bp-down(sm) {
+      margin-top: 24px;
+    }
+
+  }
+
+  &__block-feedback {
+    display: flex;
+    align-items: flex-end;
+    @include bp-down(sm) {
+      order: 1;
+      margin-top: 20px;
+    }
+  }
+
+  &__block-account {
+
+  }
+
+  &__copyright {
+    font-size: $h2-font-size;
+    line-height: 1;
+    letter-spacing: -0.3px;
+    @media (max-width: 990px) {
+      font-size: 1.75rem;
+    }
+    @media (max-width: 767px) {
+      font-size: 2.25rem;
+      padding-right: 28px;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  &__mobile {
+    margin: 0;
+    line-height: 1;
+    color: rgba($body-color, .9);
+  }
+
+  &__email {
+    margin: 0 0 30px;
+    line-height: 1;
+    color: rgba($body-color, .9);
+  }
+
+  &__credits {
+    margin: 0;
+    color: rgba($body-color, .9);
+    font-size: $font-size-sm;
+  }
+
+  &__list li {
+    line-height: 1;
+  }
+
+  &__link {
+    color: rgba($link-color, .9);
+    font-size: $font-size-sm;
+
+    @include hover {
+      color: rgba(darken($link-hover-color, 15%), .9);
+      text-decoration: $link-hover-decoration;
+    }
+  }
+
+  &__link-email {
+    @media (max-width: 990px) {
+      font-size: 0.65rem;
+    }
+  }
+
+  &__about-text {
+    @include bp-down(sm) {
+      font-size: 1.2rem;
+    }
+  }
+}

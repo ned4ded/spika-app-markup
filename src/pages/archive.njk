@@ -1,0 +1,117 @@
+{% extends "layout.njk" %}
+{% import "blocks/archive-item.njk" as archiveItem %}
+
+{% set page = 'archive' %}
+
+{% block content%}
+<div class="archive__content">
+    <div class="container">
+        <div class="row">
+            <div class="col-4 col-md-2">
+                <h2 class="archive__title title-lg">АRCHIVE 2018</h2>
+                <!-- <h2 class="archive__year title-lg">2018</h2> -->
+            </div>
+            <div class="col-4 col-md-2">
+                {% for item in [
+                    {
+                        title: "Childish Gambino",
+                        date: "12.06.18",
+                        location: "Moscow, Arbat Hall",
+                        link: true,
+                        text: "See report<br>",
+                        icon: true
+                    },
+                    {
+                        title: "Wiz Khalifa",
+                        date: "12.06.18",
+                        location: "Saint-Petersburg, Mod",
+                        link: false,
+                        text: "12 <br>photos",
+                        icon: false
+                    },
+                    {
+                        title: "MAX & IGGOR CAVALERA",
+                        date: "12.06.18",
+                        location: "Moscow, Izvestia Hall",
+                        link: false,
+                        text: "25 <br>photos",
+                        icon: false
+                    },
+                    {
+                        title: "Post Malone",
+                        date: "12.06.18",
+                        location: "Saint-Petersburg, Mod",
+                        link: true,
+                        text: "See report<br>",
+                        icon: true,
+                        img: "./assets/imgs/concert-card-img-4.jpg"
+                    },
+                    {
+                        title: "Seafret",
+                        date: "12.06.18",
+                        location: "Moscow, Izvestia Hall",
+                        link: true,
+                        text: "See report<br>",
+                        icon: true
+                    },
+                    {
+                        title: "The vintage caravan",
+                        date: "12.06.18",
+                        location: "Moscow, Arbat Hall",
+                        link: true,
+                        text: "See report<br>",
+                        icon: true
+                    }
+                ] %}
+                   {{ archiveItem.block(item) }}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="row no-gutters">
+            <div class="col-4 col-md-2">
+                <h2 class="archive__title title-lg">АRCHIVE 2017</h2>
+            </div>
+            <div class="col-4 col-md-2">
+                {% for item in [
+                    {
+                        title: "The vintage caravan",
+                        date: "12.06.18",
+                        location: "Moscow, Arbat Hall",
+                        link: true,
+                        text: "See report<br>",
+                        icon: true
+                    },
+                    {
+                        title: "Mac Miller",
+                        date: "12.06.18",
+                        location: "Saint-Petersburg, Mod",
+                        link: true,
+                        text: "12 <br>photos",
+                        icon: true
+                    },
+                    {
+                        title: "Ariana Grande",
+                        date: "12.06.18",
+                        location: "Moscow, Izvestia Hall",
+                        link: true,
+                        text: "25 photos<br>",
+                        icon: true
+                    },
+                    {
+                        title: "Rick Ross",
+                        date: "12.06.18",
+                        location: "Moscow, Izvestia Hall",
+                        link: true,
+                        text: "See report<br>",
+                        icon: true
+                    }
+                ] %}
+                   {{ archiveItem.block(item) }}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include "partials/newsletter.njk" %}
+{% endblock %}

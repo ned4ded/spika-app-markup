@@ -1,0 +1,201 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+  {% include "partials/jumbotron.njk" %}
+
+  <div class="container navbar__after">
+    <div class="row">
+      <div class="col-4">
+        <div class="box">
+          <div class="box__content">
+            <h1>h1. Theme heading</h1>
+            <h2>h2. Theme heading</h2>
+            <h3>h3. Theme heading</h3>
+            <h4>h4. Theme heading</h4>
+            <h5>h5. Theme heading</h5>
+            <h6>h6. Theme heading</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row section">
+      <div class="col-2">
+        <div class="box h-100">
+          <div class="box__content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-2">
+        <div class="box h-100">
+          <div class="box__content">
+            <p class="text-transform-none">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+              dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row section">
+      <div class="col-4">
+        <div class="box">
+          <div class="box__content">
+            <p>You can use the mark tag to
+              <mark>highlight</mark>
+              text.</p>
+            <p>
+              <u>This line of text will render as underlined</u>
+            </p>
+            <p>
+              <small>This line of text is meant to be treated as fine print.</small>
+            </p>
+            <p>
+              <strong>This line rendered as bold text.</strong>
+            </p>
+            <p>
+              <em>This line rendered as italicized text.</em>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row section">
+      <div class="col-4">
+        <div class="box container">
+          <div class="row">
+            <div class="box__content box__content--borders col-2">
+              <a href="#" role="button" class="btn btn-primary">Primary</a>
+              <a href="#" role="button" class="btn btn-secondary">Secondary</a>
+              <a href="#" role="button" class="btn btn-contrast">Contrast</a>
+            </div>
+            <div class="box__content box__content--borders col-2">
+              <a href="#" role="button" class="btn btn-outline-primary">Primary</a>
+              <a href="#" role="button" class="btn btn-outline-secondary">Secondary</a>
+              <a href="#" role="button" class="btn btn-outline-contrast">Contrast</a>
+            </div>
+            <div class="box__content box__content--borders col-2">
+              <a class="btn btn-secondary" href="#" role="button">Link</a>
+              <button class="btn btn-secondary" type="submit">Button</button>
+              <input class="btn btn-secondary" type="button" value="Input">
+              <input class="btn btn-secondary" type="submit" value="Submit">
+              <input class="btn btn-secondary" type="reset" value="Reset">
+            </div>
+            <div class="box__content box__content--borders col-2">
+              <button type="button" class="btn btn-primary btn-sm">Small button</button>
+              <button type="button" class="btn btn-secondary btn-sm">Small button</button>
+            </div>
+            <div class="box__content box__content--borders col-4">
+              <button type="button" class="btn btn-primary btn-lg">Large button</button>
+              <button type="button" class="btn btn-secondary btn-lg">Large button</button>
+            </div>
+            <div class="box__content col-2">
+              <p>
+                <button type="button" class="btn btn-primary btn-block">Block level button</button>
+              </p>
+              <p>
+                <button type="button" class="btn btn-secondary btn-block">Block level button</button>
+              </p>
+            </div>
+            <div class="box__content col-2">
+              <p>
+                <button type="button" class="btn btn-primary active">Active</button>
+                <button type="button" class="btn btn-secondary active">Active</button>
+                <button type="button" class="btn btn-contrast active">Active</button>
+              </p>
+
+              <p>
+                <button type="button" class="btn btn-primary" disabled="disabled">Disabled</button>
+                <button type="button" class="btn btn-secondary" disabled="disabled">Disabled</button>
+                <button type="button" class="btn btn-contrast" disabled="disabled">Disabled</button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row section">
+      <div class="col-4">
+        <div class="box">
+          <div class="box__content">
+            <p class="text-transform-none">Badges:</p>
+            <p>
+              <span class="badge badge-primary">Primary</span>
+              <span class="badge badge-contrast">Contrast</span>
+              <span class="badge badge-secondary">Secondary</span>
+              <span class="badge badge-outline-primary">Primary</span>
+              <span class="badge badge-outline-contrast">Contrast</span>
+              <span class="badge badge-outline-secondary">Secondary</span>
+            </p>
+            <p>
+              <span class="badge badge-pill badge-primary">Primary</span>
+              <span class="badge badge-pill badge-contrast">Contrast</span>
+              <span class="badge badge-pill badge-secondary">Secondary</span>
+              <span class="badge badge-pill badge-outline-primary">Primary</span>
+              <span class="badge badge-pill badge-outline-contrast">Contrast</span>
+              <span class="badge badge-pill badge-outline-secondary">Secondary</span>
+            </p>
+            <p>
+              <span class="badge badge-rect badge-primary">Primary</span>
+              <span class="badge badge-rect badge-contrast">Contrast</span>
+              <span class="badge badge-rect badge-secondary">Secondary</span>
+              <span class="badge badge-rect badge-outline-primary">Primary</span>
+              <span class="badge badge-rect badge-outline-contrast">Contrast</span>
+              <span class="badge badge-rect badge-outline-secondary">Secondary</span>
+            </p>
+            <p>
+              <a href="#" class="badge badge-primary">Link</a>
+              <a href="#" class="badge badge-contrast">Link</a>
+              <a href="#" class="badge badge-secondary">Link</a>
+              <a href="#" class="badge badge-outline-primary">Link</a>
+              <a href="#" class="badge badge-outline-contrast">Link</a>
+              <a href="#" class="badge badge-outline-secondary">Link</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row section">
+      <div class="col-4">
+        <div class="box">
+          <div class="box__content">
+            <form action="/">
+              <div class="form-group">
+                <label for="ex-email">Email address</label>
+                <input id="ex-email" type="email" class="form-control" placeholder="Email">
+                <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+
+              <div class="form-group">
+                <label for="ex-select">Select option</label>
+                <select id="exampleFormControlSelect1" class="form-control">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+                <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

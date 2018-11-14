@@ -1,0 +1,123 @@
+.search {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	overflow: auto;
+	z-index: 20;
+	background-color: #000;
+	opacity: 0;
+	visibility: hidden;
+	transition: visibility 0.4s, opacity 0.4s;
+	padding-bottom: 3rem;
+	&.is-open {
+		opacity: 1;
+		visibility: visible;
+	}
+	&__top {
+		font-size: 2.25rem;
+		margin-bottom: 4rem;
+		min-height: 64px;
+		align-items: center;
+		@include bp-down(md) {
+			min-height: 40px;
+			margin-bottom: 3rem;
+		}
+	}
+	&__mob {
+		@include bp-down(xs) {
+			height: 40px;
+			display: flex;
+			align-items: center;
+		}
+	}
+	&__input {
+		display: inline-block;
+		font-size: 2.25rem;
+		background-color: transparent;
+		text-transform: uppercase;
+		border: none;
+		outline: none;
+		color: #fff;
+		width: calc(100% - 156px - 12px);
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		&::placeholder {
+			color: #fff;
+		}
+		@include bp-down(xl) {
+			font-size: 1.5rem;
+			width: calc(100% - 110px - 12px);
+		}
+		@include bp-down(md) {
+			font-size: 1.125rem;
+			width: calc(100% - 80px - 12px);
+		}
+	}
+
+	&__close {
+		padding: 0;
+		display: inline-block;
+		background: none;
+		color: #fff;
+		border: none;
+		outline: none;
+		text-transform: uppercase;
+		text-align: right;
+		@include bp-down(xl) {
+			font-size: 1.5rem;
+		}
+		@include bp-down(md) {
+			font-size: 1.125rem;
+		}
+	}
+	&__list {
+		list-style-type: none;
+		padding-left: 0;
+		.concert-card:not(:last-child) {
+			margin-bottom: 3.8rem;
+		}
+	}
+	&__title {
+		font-size: 1.125rem;
+		padding-left: 1rem;
+		margin-bottom: 1.5rem;
+		position: relative;
+		&:before {
+			content: "";
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background-color: #fff;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			position: absolute;
+		}
+	}
+	&__block {
+		&:nth-child(1) {
+			margin-bottom: 6.1rem;
+		}
+		&:nth-child(2) {
+			margin-bottom: 8rem;
+			@include bp-down(md) {
+				margin-bottom: 6rem;
+			}
+		}
+	}
+	.blog-card__title {
+		margin-bottom: 1rem;
+		@include bp-down(md) {
+			margin-bottom: 0.7rem;
+		}
+	}
+
+	.archive-item {
+		@include bp-down(md) {
+			border-bottom: 1px solid #fff;
+		}
+	}
+}

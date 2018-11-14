@@ -1,0 +1,71 @@
+.blog-page {
+	&__content {
+		padding-top: 10rem;
+		@include bp-down(md) {
+			padding-top: 5.2rem;
+		}
+	}
+	&__date {
+		line-height: 1;
+		letter-spacing: -0.3px;
+		@include bp-down(md) {
+			font-size: 0.75rem;
+			line-height: 1rem;
+		}
+	}
+	&__title {
+		line-height: 1;
+		margin-bottom: 1.5rem;
+		@include bp-down(md) {
+			margin-bottom: 1rem;
+		}
+	}
+	&__descr {
+		margin-bottom: 4rem;
+		@extend %blogDescr;
+		&:hover {
+			.blog-page__link {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+		@include bp-down(md) {
+			font-size: 1.125rem;
+			line-height: 1.5rem;
+			letter-spacing: 0.019rem;
+			margin-bottom: 3rem;
+		}
+	}
+	&__link {
+		color: $contrast;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.4s, visibility 0.4s;
+		@include bp-down(md) {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	.blog-card {
+		margin-bottom: 5.5rem;
+		@include bp-down(lg) {
+			margin-bottom: 4rem;
+		}
+		@include bp-down(sm) {
+			margin-bottom: 2.8rem;
+		}
+	}
+	&__blogs {
+		padding-bottom: 10.5rem;
+		@include bp-down(md) {
+			padding-bottom: 1.9rem;
+		}
+	}
+}
+
+.blog-inner-page__content {
+	padding: 9.2rem 0 8.3rem;
+	@include bp-down(sm) {
+		padding: 4.3rem 0 1rem;
+	}
+}

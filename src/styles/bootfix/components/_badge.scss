@@ -1,0 +1,31 @@
+.badge {
+  border-radius: 3px;
+  font-size: 100%;
+  padding: .15em .4em .25em;
+  line-height: 1;
+
+  &-sm {
+    font-size: $font-size-sm;
+  }
+
+  &-spread {
+    padding: .3em .4em .4em;
+  }
+}
+
+.badge-pill {
+  border-radius: 6px;
+}
+
+.badge-rect {
+  border-radius: 0;
+}
+
+@each $color, $value in $theme-colors {
+  $color-hover: color-yiq($value);
+
+  .badge-outline-#{$color} {
+    color: $value;
+    border: $border-width solid $value;
+  }
+}

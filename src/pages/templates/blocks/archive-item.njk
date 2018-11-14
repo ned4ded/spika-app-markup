@@ -1,0 +1,35 @@
+{% macro block(props) %}
+    <div class="archive-item">
+        <h5 class="archive-item__title title-lg">{{ props.title }}</h5>
+        <div class="archive-item__content">
+            <div class="archive-item__col">
+                <div class="archive-item__date">{{ props.date }}</div>
+                <div class="archive-item__location">{{ props.location }}</div>
+            </div>
+            <div class="archive-item__col">
+                <div class="archive-item__info">
+                    {% if props.link %}
+                        <a href="#" class="archive-item__text">{{ props.text | safe }}{% if props.icon %} ↓{% endif %}</a>
+                        {% elseif props.seat %}
+                            <div class="archive-item__seat">{{ props.seat }}</div>
+                            <div class="archive-item__bonus">{{ props.bonus }} bonus points</div>
+                        {% else %}
+                            <span class="archive-item__text">{{ props.text | safe }}{% if props.icon %} ↓{% endif %}</span>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% if props.img %}
+            <div class="archive-item__slider slider">
+                <div class="archive-item__slide slider__slide slide">
+                    <div class="archive-item__img slide__img"><img src="{{ props.img }}" alt="img"></div>
+                    <div class="archive-item__counter slide__counter">
+                        <span class="archive-item__current slide__current">1</span>
+                        /
+                        <span class="archive-item__total slide__total">9</span>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+{% endmacro %}

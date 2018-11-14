@@ -1,0 +1,83 @@
+.page-concert {
+
+  &__container {
+    padding: 0;
+  }
+
+  &__row {
+    @media (max-width: 575px) {
+      margin: 0;
+    }
+  }
+
+  &__col-about {
+    max-width: calc(50% - 12px);
+    @include bp-down(sm) {
+      max-width: 100%;
+    }
+  }
+
+
+  &__image {
+    min-height: 528px;
+    object-fit: cover;
+  }
+
+  &__about {
+    padding-top: 220px;
+    padding-bottom: 224px;
+    min-height: 768px;
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &__about-duplicate {
+    display: none;
+    @include bp-down(sm) {
+      display: block;
+      min-height: 312px;
+      padding: 51px 0;
+    }
+  }
+
+  &__about-text {
+    line-height: 1;
+    @include bp-down (sm) {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+
+  &__board {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    @media (max-width: 767px) {
+      padding-top: 0;
+      padding-left: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &__video {
+    width: 100%;
+    max-height: 380px;
+    height: auto;
+    margin-bottom: 248px;
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &__slider-indicators {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    margin: 0;
+    justify-content: flex-end;
+    @media (max-width: 767px) {
+      display: flex;
+    }
+  }
+}

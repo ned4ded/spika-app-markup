@@ -1,0 +1,30 @@
+.archive {
+  &__content {
+    padding: 128px 0 96px;
+    @include bp-down(xs) {
+      padding: 72px 0 49px;
+    }
+  }
+
+  &__title {
+    max-width: 600px;
+    @include bp-down(sm) {
+      font-size: 28px;
+      letter-spacing: 0.2px;
+      margin-bottom: 18px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid $white;
+    }
+    @include bp-down(xs) {
+      font-size: 16px;
+    }
+  }
+  .row {
+    &:not(:first-child) {
+      @include bp-down(sm) {
+        margin-top: 90px;
+      }
+
+    }
+  }
+}

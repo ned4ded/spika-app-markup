@@ -1,0 +1,69 @@
+{% set links = [ 'Events', 'Archive', 'Blog', 'Contact', 'En', 'Search', 'Log in' ] %}
+
+<div class="navbar clearfix navbar--p--absolute">
+  <div class="navbar__content js-navbar is-active">
+    <div class="navbar__inputs">
+      <div class="container">
+        <div class="row">
+          <div class="col-4 login-menu">
+            <button type="button" class="login-menu__close">close</button>
+            <form class="login login--navbar navbar__login" action="/" method="post">
+              <button type="button" class="d-md-none login__back">
+                
+                <span>←</span>
+                <span>Back</span>
+              </button>
+              <input type="email" placeholder="E-mail" class="login__item login__input login__email js-login-focus">
+              <input type="password" placeholder="Password" class="login__item login__input login__password"> 
+              <button type="submit" class="login__item login__submit btn-link">
+                <span class="d-none d-md-block">Log In</span> 
+                <span class="d-md-none">Enter</span> 
+              </button>
+            </form>
+            <a href="#" class="login-menu__password-regeneration">
+              <span>Password</span> <span>regeneration</span><span> →</span>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-4 navbar__core">
+
+          <a href="/" class="navbar__brand">
+            spika
+          </a>
+          <button type="button" class="navbar__search js-search-trigger">Search</button>
+          <ul class="menu navbar__menu">
+            {% for link in links %}
+            <li class="menu__item">
+              <a href="{% if 'Search' in link %}#{% elif 'Log in' in link %}#{% else %}{{link | lower}}.html{% endif %}" class="menu__link{% if 'Search' in link %} js-search-trigger{% elif 'Log in' in link %} js-login-trigger{% endif %}">
+                {{ link }}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+          <button type="button" class="navbar__menu-trigger">menu</button>
+          <div class="mobile-menu">
+            <button type="button" class="mobile-menu__close">close</button>
+            <div class="mobile-menu__content">
+              <div class="mobile-menu__top">
+                <a href="" class="mobile-menu__link">Events</a>
+                <a href="" class="mobile-menu__link">Archive</a>
+                <a href="" class="mobile-menu__link">Blog</a>
+              </div>
+              <div class="mobile-menu__bottom">
+                <a href="" class="mobile-menu__link">RU</a>
+                <a href="" class="mobile-menu__link">Contact</a>
+                <a href="" class="mobile-menu__link">Log in</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

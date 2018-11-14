@@ -1,0 +1,113 @@
+{% import "blocks/concert-card.njk" as concert %}
+{% import "blocks/archive-item.njk" as archiveItem %}
+{% import "blocks/blog-card.njk" as blogMaker %}
+
+{% set conserts = [
+    {
+        name : "Post Malone",
+        date : "17.04",
+        src : "assets/imgs/concert-card-img-4.jpg",
+        tags : [
+          {
+            content : "От 4800 руб",
+            type : "primary"
+          },
+          {
+            content : "Рэп",
+            type : "outline-primary"
+          },
+          {
+            content : "Соул",
+            type : "outline-primary"
+          }
+        ]
+      }, 
+      {
+        name : "Mac Miller",
+        date : "05.01",
+        src : "assets/imgs/concert-card-img-1.jpg",
+        tags : [
+          {
+            content : "От 6000 руб",
+            type : "primary"
+          },
+          {
+            content : "Хип-хоп",
+            type : "outline-primary"
+          }
+        ]
+      }
+] %}
+
+{% set archives = [
+    {
+        title: "Ariana Grande",
+        date: "12.06.18",
+        location: "Moscow, Izvestia Hall",
+        link: true,
+        text: "25 photos<br>",
+        icon: true
+    }, {
+        title: "Rick Ross",
+        date: "12.06.18",
+        location: "Moscow, Izvestia Hall",
+        link: true,
+        text: "See report <br>",
+        icon: true
+    }
+] %}
+
+{% set blog = {
+    image: "blog_img_3.png", 
+    date: "03.12.18",
+    title: "oldschool is dead", 
+    descr_short: "Detroit-born Jazzelle Zanaughtti likes to doodle. A few years back, she drew a woman from another…" 
+} %}
+
+<div class="search js-search">
+    <div class="container search__container">
+        <div class="row search__top">
+            <div class="d-none d-lg-block col-lg-2">
+                <a href="/" class="search__brand">
+                    spika
+                </a>
+            </div>
+            <div class="col-4 col-lg-2 search__mob">
+
+                <input type="text" class="search__input js-search-input" placeholder="Type something...">
+                <button class="search__close js-search-close" type="button">close</button>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 col-md-2 ml-auto">
+                <ul class="search__list">
+                    <li class="search__block">
+                        <h4 class="search__title">
+                            Concerts
+                        </h4>
+                        {% for item in conserts %}
+                            {{ concert.make(item) }}
+                        {% endfor %}
+                    </li>
+                    <li class="search__block">
+                        <h4 class="search__title">
+                            Archive
+                        </h4>
+                        {% for item in archives %}
+                            {{ archiveItem.block(item) }}
+                        {% endfor %}
+                    </li>
+                    <li class="search__block">
+                        <h4 class="search__title">
+                            Articles
+                        </h4>
+                        {{blogMaker.makeBlogCard(blog)}}
+                        
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>

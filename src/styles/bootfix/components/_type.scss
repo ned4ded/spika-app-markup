@@ -1,0 +1,28 @@
+p {
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+h1,
+.h1 {
+	letter-spacing: -0.045rem;
+	word-spacing: -0.25rem;
+	@include media-breakpoint-down(md) {
+		font-size: 2.25rem;
+		line-height: 1;
+	}
+}
+
+.title-lg {
+  font-size: 68px;
+  letter-spacing: -2.5px;
+  line-height: 0.94;
+  @include media-breakpoint-down(md) {
+    font-size: 48px;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: 36px;
+    letter-spacing: -0.3px;
+  }
+}

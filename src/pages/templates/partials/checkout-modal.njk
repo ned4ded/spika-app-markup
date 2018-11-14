@@ -1,0 +1,133 @@
+<div class="checkout-modal js-checkout-modal" style="display: none">
+    <div class="checkout-modal__content">
+
+        <div class="row checkout-modal__row checkout-modal__row-lg mb-4">
+            <div class="col-2 checkout-modal__col-left">
+                <p class="checkout-modal__title col-2">Checkout</p>
+            </div>
+            <div class="col-2 checkout-modal__col-right">
+                <button type="button" class="checkout-modal__btn checkout-modal__close js-checkout-modal-close col-2">
+                    Close
+                </button>
+            </div>
+        </div>
+
+        <div class="row checkout-modal__row mb-4">
+            <div class="checkout-modal__card checkout-modal__card_paddingless">
+                <img src="assets/imgs/concert-page-placeholder.jpg" alt="Checkout image" class="checkout-modal__image">
+            </div>
+            <div class="checkout-modal__card ">
+                <p class="checkout-modal__name">Max & Iggor Cavalera</p>
+                <ul class="checkout-modal__list">
+                    {% for item in [
+                        {
+                            name: 'date',
+                            value: 'June 12'
+                        },
+                        {
+                            name: 'price',
+                            value: '$160'
+                        },
+                        {
+                            name: 'qty',
+                            value: '2'
+                        },
+                        {
+                            name: 'type',
+                            value: 'parter'
+                        }] %}
+                        <li class="checkout-modal__item">
+                            <p class="checkout-modal__item-name">{{ item.name }}</p>
+                            <p class="checkout-modal__item-value">{{ item.value }}</p>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="checkout-modal__card checkout-modal__card_stretchable">
+                <ul class="checkout-modal__list">
+                    {% for item in [
+                        {
+                            name: 'bonus points',
+                            value: '37'
+                        },
+                        {
+                            name: 'discount',
+                            value: '$119'
+                        }] %}
+                        <li class="checkout-modal__item">
+                            <p class="checkout-modal__item-name">{{ item.name }}</p>
+                            <p class="checkout-modal__item-value">{{ item.value }}</p>
+                        </li>
+                    {% endfor %}
+                </ul>
+
+                <div class="checkout-modal__card-wrapper">
+                    <button class="checkout-modal__btn checkout-modal__btn-discount" type="button">Use point <br/> for
+                        discount
+                    </button>
+                    <p class="checkout-modal__price">Total price : $320 </p>
+                </div>
+            </div>
+            <div class="checkout-modal__card checkout-modal__card_hideable ">
+                <p class="checkout-modal__price">Total price : $320 </p>
+            </div>
+        </div>
+
+        <form action="/" class="checkout-modal__form">
+
+            <div class="checkout-modal__form-group form-check mb-4">
+                <label class="form-check-label label-container">
+                    <input type="checkbox" class="checkout-modal__checkbox form-check-input checkbox">
+                    <span class="checkbox__name">Подписаться на рассылку</span>
+                </label>
+            </div>
+
+            <div class="checkout-modal__form-group">
+                <label class="checkout-modal__label">
+                    <input type="text" class="checkout-modal__input form-control" placeholder="Ваше имя">
+                </label>
+                <label class="checkout-modal__label">
+                    <input type="text" class="checkout-modal__input form-control" placeholder="Телефон">
+                </label>
+                <label class="checkout-modal__label checkout-modal__label_lg">
+                    <input type="text" class="checkout-modal__input form-control" placeholder="Email">
+                </label>
+                <label class="checkout-modal__label checkout-modal__label-card">
+                    <input type="text" class="checkout-modal__input form-control" placeholder="Номер карты">
+                </label>
+                <div class="checkout-modal__form-card-type">
+                    <p class="checkout-modal__card-type">Mastercard</p>
+                </div>
+                <label class="checkout-modal__label checkout-modal__label-holder">
+                    <input type="text" class="checkout-modal__input form-control" placeholder="Holder name">
+                </label>
+                <div class="checkout-modal__form-data">
+                    <label class="checkout-modal__label checkout-modal__label_sm">
+                        <input type="text" class="checkout-modal__input form-control"
+                               placeholder="01">
+                    </label>
+                    <label class="checkout-modal__label checkout-modal__label_sm">
+                        <input type="text" class="checkout-modal__input form-control"
+                               placeholder="19">
+                    </label>
+                    <label class="checkout-modal__label checkout-modal__label_sm">
+                        <input type="text" class="checkout-modal__input form-control"
+                               placeholder="***">
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <small class="checkout-modal__agreement form-text text-muted mt-5 mb-3">* Покупая билет, Вы соглашаетесь
+                    с условиями <a href="#" class="checkout-modal__agreement-link">оферты</a>
+                </small>
+                <p class="text-center">
+                    <button class="btn btn-lg btn-block btn-secondary" type="submit"> Pay</button>
+                </p>
+            </div>
+
+        </form>
+
+
+    </div>
+</div>

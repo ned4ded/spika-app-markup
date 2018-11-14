@@ -1,0 +1,22 @@
+.box {
+  padding-top: map-get($spacers, 3);
+  padding-bottom: map-get($spacers, 3);
+  border-bottom: 1px solid #fff;
+
+  &__content {
+    padding-top: map-get($spacers, 3);
+    padding-bottom: map-get($spacers, 2);
+
+    &--borders {
+      border-bottom: 1px solid rgba(white, .25);
+    }
+  }
+
+  &--no-borders {
+    border-bottom: 0;
+  }
+
+  &--fluid {
+    height: 100%;
+  }
+}

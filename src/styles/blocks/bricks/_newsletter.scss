@@ -1,0 +1,15 @@
+.newsletter {
+  &__link {
+    display: block;
+    padding: 30px 0;
+    font-size: 36px;
+    line-height: 1;
+    text-align: center;
+    background-color: $white;
+    color: $black;
+    @include bp-down(sm) {
+      padding: 12px 0;
+      font-size: 18px;
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{% extends "layout.njk" %}
+{% import "blocks/archive-item.njk" as archiveItem %}
+
+{% set page = 'account' %}
+
+{% block content%}
+<div class="account__content">
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-4 col-md-2">
+                <h2 class="account__title title-lg">Personal info</h2>
+            </div>
+            <div class="col-4 col-md-2">
+                <div class="account__info row">
+                    <div class="col-4 col-lg-2">
+                        <div class="account__item">
+                            <div class="accoutn__tel">
+                                <div class="account__label">Elbrus</div>
+                                <div class="account__tel">+7 916 709 69 68</div>
+                            </div>
+                        </div>
+                        <div class="account__item">
+                            <div class="accoutn__email">
+                                <div class="account__label">Bigelb@gmail.com</div>
+                                <a href="#" class="account__btn">Change password</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-lg-2">
+                        <div class="account__item">
+                            <div class="account__card account-card">
+                                <div class="account-card__wrap">
+                                    <button class="account-card__remove">Remove<span> card</span></button>
+                                    <div class="account-card__info">
+                                        <div class="account__label account-card__type">Mastercard</div>
+                                        <div class="account__card-number account-card__number">••••  ••••  ••••  7575</div>
+                                    </div>
+                                </div>
+                                <div class="account-card__deleted">
+                                    <button class="account-card__undo"><span>Undo</span> removing</button>
+                                    <div class="account-card__deleted-number">Mastercard •••• 7575</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="account__item">
+                            <div class="new-card is-active">
+                                <div class="new-card__add">
+                                    <button type="button" class="account__btn">Add card</button>
+                                </div>
+                                <form action="" class="new-card__form card-form">
+                                    <button type="button" class="card-form__close">Close</button>
+                                    <div class="card-form__form-group">
+                                        <input type="text" class="card-form__input" placeholder="Card number">
+                                    </div>
+                                    <div class="card-form__form-group">
+                                        <input type="text" class="card-form__input" placeholder="Holder name">
+                                    </div>
+                                    <div class="card-form__footer">
+                                        <div class="card-form__form-group card-form__form-group_small">
+                                            <input type="text" class="card-form__input card-form__input_date" placeholder="MM/YY">
+                                        </div>
+                                        <div class="card-form__form-group card-form__form-group_small">
+                                            <input type="text" class="card-form__input card-form__input_cvv" placeholder="CCV">
+                                        </div>
+                                        <div class="card-form__submit">
+                                            <button type="submit" class="account__btn">Add card</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="account__history">
+                    <div class="account__text">
+                        Purchase history
+                    </div>
+                    <div class="account__bonus">
+                        You got <span class="account__bonus-number">37</span> bonus points
+                    </div>
+                </div>
+                {% for item in [
+                    {
+                        title: "Childish Gambino",
+                        date: "12.06.18",
+                        location: "Moscow, Arbat Hall",
+                        seat: "parter",
+                        bonus: "20"
+                    },
+                    {
+                        title: "Wiz Khalifa",
+                        date: "12.06.18",
+                        location: "Saint-Petersburg, Mod",
+                        link: true,
+                        text: "See report<br>",
+                        icon: true
+                    },
+                    {
+                        title: "MAX & IGGOR CAVALERA",
+                        date: "12.06.18",
+                        location: "Moscow, Izvestia Hall",
+                        seat: "vip",
+                        bonus: "17"
+                    }
+                ] %}
+                   {{ archiveItem.block(item) }}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include "partials/newsletter.njk" %}
+{% endblock %}

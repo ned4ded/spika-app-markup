@@ -1,0 +1,40 @@
+{% import "blocks/filter.njk" as filter %}
+{% import "blocks/concert-card.njk" as concert %}
+{% import "blocks/btn-panel.njk" as btn %}
+
+{% extends "layout.njk" %}
+
+{% set page = 'page-home' %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row no-gutters-fluid">
+            <div class="col-4">
+                {% include "partials/jumbotron.njk" %}
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-4 mb-md-6 mb-2 mt-md-6 mt-4">
+                {{ filter.make() }}
+            </div>
+
+            {% set concerts = datasets.get('concerts.json') %}
+
+            {% for c in concerts %}
+                <div class="col-4 col-md-2 {{ ' mb-md-7' if loop.index <= (concerts.length - 2) }}">
+                    {{ concert.make(c) }}
+                </div>
+            {% endfor %}
+
+            <div class="col-4 section">
+                {{ btn.make('Больше концертов') }}
+            </div>
+        </div>
+    </div>
+    {% include "partials/newsletter.njk" %}
+
+{% endblock %}

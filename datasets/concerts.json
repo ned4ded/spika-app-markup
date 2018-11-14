@@ -1,0 +1,78 @@
+[
+  {
+    "name" : "Dir En Grey",
+    "date" : "19.05",
+    "src" : "assets/imgs/concert-card-img-1.jpg",
+    "tags" : [
+      {
+        "content" : "От 2000 руб",
+        "type" : "primary"
+      },
+      {
+        "content" : "Новое",
+        "type" : "contrast"
+      },
+      {
+        "content" : "Метал",
+        "type" : "outline-primary"
+      },
+      {
+        "content" : "Фолк",
+        "type" : "outline-primary"
+      }
+    ]
+  },
+  {
+    "name" : "MONO ft. A STORM OF LIGHT",
+    "date" : "03.12",
+    "src" : "assets/imgs/concert-card-img-2.jpg",
+    "tags" : [
+      {
+        "content" : "От 700 руб",
+        "type" : "primary"
+      },
+      {
+        "content" : "Соул",
+        "type" : "outline-primary"
+      },
+      {
+        "content" : "Джаз",
+        "type" : "outline-primary"
+      }
+    ]
+  },
+  {
+    "name" : "MAX & IGGOR CAVALERA",
+    "date" : "11.05",
+    "src" : "assets/imgs/concert-card-img-3.jpg",
+    "tags" : [
+      {
+        "content" : "От 3000 руб",
+        "type" : "primary"
+      },
+      {
+        "content" : "Хардкор",
+        "type" : "outline-primary"
+      }
+    ]
+  },
+  {
+    "name" : "Post Malone",
+    "date" : "17.04",
+    "src" : "assets/imgs/concert-card-img-4.jpg",
+    "tags" : [
+      {
+        "content" : "От 4800 руб",
+        "type" : "primary"
+      },
+      {
+        "content" : "Рэп",
+        "type" : "outline-primary"
+      },
+      {
+        "content" : "Соул",
+        "type" : "outline-primary"
+      }
+    ]
+  }
+]

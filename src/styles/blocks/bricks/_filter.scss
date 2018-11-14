@@ -1,0 +1,130 @@
+.filter {
+  display: flex;
+  flex-flow: row wrap;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  @include bp-down(sm) {
+    flex-direction: column;
+  }
+
+  &__btn {
+    color: rgba($white, .9);
+    padding: 0;
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    display: none;
+    cursor: pointer;
+    &:hover {
+      color: rgba(darken($link-hover-color, 30%), .9);
+    }
+    @include bp-down(sm) {
+      display: inline-block;
+    }
+  }
+
+  &__open {
+    display: none;
+    @include bp-down(sm) {
+      display: inline-flex;
+      align-items: center;
+    }
+  }
+
+  &__close {
+
+  }
+
+  &__outter {
+    z-index: 1;
+    position: relative;
+  }
+
+  &__inner {
+    @include bp-down(sm) {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 12px;
+      background-color: $black;
+      border-bottom: 1px $white solid;
+    }
+  }
+
+  &__inner-opened {
+    display: block;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 25%;
+
+    &:not(:last-child) {
+      border: 1px $white solid;
+    }
+
+    @include bp-down(sm) {
+      width: 100%;
+    }
+  }
+
+  &__link {
+    $primary: map-get($theme-colors, "primary");
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 100%;
+    padding: 0px 15px;
+
+    line-height: 2.58;
+    border-left: 0;
+
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &--contrast {
+      $contrast: map-get($theme-colors, "contrast");
+
+      @include button-variant($contrast, $contrast);
+    }
+  }
+
+  &__icon {
+    width: 11px;
+    height: 24px;
+
+    background-image: url('../assets/imgs/icon-arrow-down.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
+
+  &__btn-icon {
+    margin-left: 12px;
+  }
+
+  &__link:hover &__icon,
+  &__btn:hover &__icon {
+    opacity: .7;
+  }
+
+  &__link--contrast &__icon {
+    width: 16px;
+    height: 16px;
+    background-image: url('../assets/imgs/icon-close.png');
+  }
+}

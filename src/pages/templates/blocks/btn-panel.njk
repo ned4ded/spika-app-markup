@@ -1,0 +1,5 @@
+{% macro make(content, classes, href = "#") %}
+<a href="{{ href }}" class="btn-panel{{ ' ' + classes if classes}}">
+  <span class="btn-panel__text">{{ content }}</span>
+</a>
+{% endmacro %}

@@ -1,0 +1,17 @@
+{% macro make(concert) %}
+<div class="concert-card">
+  <div class="concert-card__img" style="background-image: url({{ concert.src }})"></div>
+
+  <p class="concert-card__data">
+    <span class="concert-card__date">{{ concert.date }}</span>
+    <span class="concert-card__about">
+      <span class="concert-card__name">{{ concert.name }}</span>
+      <span class="concert-card__tags">
+        {% for tag in concert.tags %}
+        <span class="badge badge-sm badge-{{ tag.type }} concert-card__tag">{{ tag.content }}</span>
+        {% endfor %}
+      </span>
+    </span>
+  </p>
+</div>
+{% endmacro %}

@@ -1,0 +1,95 @@
+%blogDescr {
+	font-family: $pragmatica;
+	font-size: 2.25rem;
+	line-height: 2.5rem;
+	letter-spacing: -0.02rem;
+	text-transform: none;
+}
+
+.blog-article {
+	margin-bottom: 5.8rem;
+	@include bp-down(md) {
+		margin-bottom: 1.6rem;
+	}
+	&--border {
+		padding-top: 3.7rem;
+		border-top: 1px solid $white;
+		@include bp-down(sm) {
+			padding-top: 1.9rem;
+		}
+	}
+	&__date {
+		line-height: 1;
+		letter-spacing: -0.3px;
+		@include bp-down(sm) {
+			font-size: 0.75rem;
+			line-height: 1rem;
+			margin-top: 0.5rem;
+		}
+	}
+	&__title {
+		line-height: 1;
+		margin-bottom: 2.3rem;
+		@include bp-down(sm) {
+			margin-bottom: 1.15rem;
+		}
+	}
+	&__descr {
+		@extend %blogDescr;
+		padding-right: 1rem;
+		margin-bottom: 3rem;
+		@include bp-down(sm) {
+			font-size: 1.875rem;
+			line-height: 2.25rem;
+			padding-right: 0;
+			margin-bottom: 1.4rem;
+		}
+	}
+	&__image {
+		margin-bottom: 1.7rem;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		// padding-bottom: calc(100% + 32px);
+		padding-bottom: 672px;
+		@include bp-down(sm) {
+			padding-bottom: 133%;
+		}
+		&--narrow {
+			margin-bottom: 1.6rem;
+		}
+	}
+	h4 {
+		@extend %blogDescr;
+		margin-bottom: 3rem;
+		margin-top: 3rem;
+		@include bp-down(sm) {
+			font-size: 1.875rem;
+			line-height: 2.25rem;
+			margin-bottom: 1.5rem;
+			margin-top: 1.5rem;
+		}
+	}
+	p {
+		font-family: $pragmatica;
+		line-height: 1.35;
+		text-transform: none;
+		letter-spacing: 0.02rem;
+		margin-bottom: 1.5rem;
+		@include bp-down(sm) {
+			margin-bottom: 1.5rem;
+		}
+		&:first-child {
+			margin-bottom: 2rem;
+			@include bp-down(sm) {
+				margin-bottom: 0;
+			}
+		}
+		& + .blog-article__image {
+			margin-top: 3rem;
+			@include bp-down(sm) {
+				margin-top: 0;
+			}
+		}
+	}
+}

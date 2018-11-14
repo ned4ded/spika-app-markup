@@ -1,0 +1,35 @@
+.radio,
+.checkbox {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio__name,
+.checkbox__name {
+  cursor: pointer;
+
+  &:hover {
+    color: #d9d9d9;
+  }
+}
+
+.radio__name:before,
+.checkbox__name:before{
+  margin-right: 8px;
+  border-radius: 5px;
+  content: '';
+  display: inline-block;
+  width: 30px;
+  height: 15px;
+  background: url("../assets/imgs/unchecked.png") center no-repeat;
+  background-size: cover;
+}
+
+.label-container .radio:checked ~ .radio__name:before,
+.label-container .checkbox:checked ~ .checkbox__name:before {
+  background: url("../assets/imgs/checked.svg") center no-repeat;
+  background-size: cover;
+}

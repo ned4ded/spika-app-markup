@@ -1,0 +1,94 @@
+.jumbotron {
+  overflow: hidden;
+
+  max-width: 100%;
+  height: 768px;
+  @include bp-down(sm) {
+    height: 480px;
+  }
+
+  &__carousel {
+    display: flex;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__slider-indicators {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    margin: 0;
+    @media (max-width: 767px) {
+      display: flex;
+    }
+  }
+
+  &__item {
+    //display: flex;
+  }
+
+  &__image {
+    min-height: 768px;
+    height: 100%;
+    object-fit: cover;
+    @include bp-down(sm) {
+      min-height: auto;
+      height: 480px;
+    }
+  }
+
+
+  &__heading-container {
+    position: absolute;
+    top: 388px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  &__heading {
+    letter-spacing: -.15rem;
+
+  }
+
+  &__link {
+    position: absolute;
+    bottom: 22px;
+    right: 14px;
+    align-self: flex-end;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    @include bp-down(sm) {
+      display: none;
+    }
+  }
+
+  //&__slide {
+  //  display: flex;
+  //  align-items: center;
+  //  flex-flow: column nowrap;
+  //  justify-content: center;
+  //
+  //  padding: 128px 24px 24px;
+  //
+  //  background-position: center;
+  //  background-size: cover;
+  //
+  //  @each $breakpoint, $max-width in $container-max-widths {
+  //    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+  //      min-width: $max-width + $grid-gutter-width;
+  //    }
+  //  }
+  //}
+}

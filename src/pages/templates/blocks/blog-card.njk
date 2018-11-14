@@ -1,0 +1,26 @@
+{% macro makeBlogCard(props) %}
+    <section class="blog-card">
+        <img class="blog-card__image" src="assets/imgs/{{props.image}}" alt="blog-image"/>
+        <div class="blog-card__date">{{props.date}}</div>
+        <h2 class="blog-card__title">{{props.title}}</h2>
+        <a href="blog-inner.html">{{props.descr_short | safe}}<span  class="blog-card__read-more">read more</span></a>
+    </section>
+{% endmacro %}
+
+{# {% macro makeBlogArticle(props) %}
+    <section class="blog-article row mb-7">
+        <div class="col-4">
+            <div class="blog-article__date mt-3 mb-1">{{props.date}}</div>
+            <h2 class="blog-article__title mb-3 h1">{{props.title}}</h2>
+            <div class="blog-article__descr text-transform-none">{{ props.descr | safe }}</div>
+        </div>
+        <div class="col-2 mx-auto">
+                <div class="blog-article__image" style="background-image: url(assets/imgs/{{props.image}})"></div>
+                <div class="blog-article__text">
+
+                </div>
+        </div>
+        
+        
+    </section>
+{% endmacro %} #}

@@ -1,0 +1,27 @@
+{% set filters = ['Санкт-Петербург', '  В любой день', 'По любой цене', 'Метал'] %}
+
+{% macro make() %}
+    <div class="filter__outter">
+        <button type="button" class="filter__open filter__btn js-filter-open">
+            Filter <i class="filter__icon filter__btn-icon"></i>
+        </button>
+        <div class="filter__inner js-filter">
+            <button type="button" class="filter__btn filter__close js-filter-close mb-3">Close</button>
+            <ul class="filter">
+                {% for f in filters %}
+                    <li class="filter__item">
+                        <a href="#"
+                           class="filter__link{{ ' filter__link--contrast' if loop.index === filters.length }}">
+                            <span class="filter__name">{{ f }}</span>
+                            <i class="filter__icon"></i>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <div class="filter__controls mt-6 mt-md-0">
+                <button type="button" class="filter__btn">Сбросить</button>
+                <button type="button" class="filter__btn">Применить</button>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
