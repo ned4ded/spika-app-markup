@@ -1,9 +1,0 @@
-@if $enable-grid-classes {
-  .no-gutters-fluid {
-    > .col,
-    > [class*="col-"] {
-      padding-right: 0;
-      padding-left: 0;
-    }
-  }
-}
